@@ -1,0 +1,167 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body,
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(#b7f8db, #50a7c2);
+}
+
+.menu {
+  position: relative;
+  height: 105px;
+  width: 100px;
+}
+
+.line {
+  position: absolute;
+  height: 10px;
+  width: 100px;
+  background-color: #fff;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.3);
+}
+
+.line--top {
+  top: 0;
+  transition: all 3s ease-out;
+  animation: moveDownRotateRev 0.8s ease-out;
+}
+
+.line--middle {
+  top: 35px;
+  transition: opacity 3s ease-out;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.line--bottom {
+  top: 70px;
+  transition: all 3s ease-out;
+  animation: moveUpRotateRev 0.8s ease-out;
+}
+
+.menu.static .line--top,
+.menu.static .line--bottom,
+.menu.static .line--middle {
+  animation: none;
+}
+
+.menu.active .line--top {
+  animation: moveDownRotate 0.8s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.menu.active .line--middle {
+  animation: fadeOut 0.8s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.menu.active .line--bottom {
+  animation: moveUpRotate 0.8s ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* ANIMATION SETUP */
+
+@keyframes moveDownRotate {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translateY(35px);
+  }
+
+  100% {
+    transform-origin: 0 0;
+    transform: translateX(15px) rotateZ(45deg);
+  }
+}
+
+@keyframes moveUpRotate {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translateY(-35px);
+  }
+
+  100% {
+    transform-origin: 0 100%;
+    transform: translateX(15px) rotateZ(-45deg);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* REVERSED ANIMATIONS */
+
+@keyframes moveDownRotateRev {
+  0% {
+    transform-origin: 0 0;
+    transform: translateX(15px) rotateZ(45deg);
+  }
+
+  50% {
+    transform: translateY(35px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes moveUpRotateRev {
+  0% {
+    transform-origin: 0 100%;
+    transform: translateX(15px) rotateZ(-45deg);
+  }
+
+  50% {
+    transform: translateY(-35px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
