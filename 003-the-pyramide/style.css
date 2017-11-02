@@ -1,0 +1,148 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #272C34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  animation: 4s fadeOut ease-in-out infinite;
+}
+
+.sun {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 120px;
+  left: 110px;
+  background-color: #FFEF00;
+  border-radius: 50%;
+  z-index: 2;
+  animation: 4s sunAnimation ease-in-out infinite;
+}
+
+.sky {
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  background-color: #7CDDF9;
+}
+
+.sand {
+  position: absolute;
+  height: 110px;
+  width: 300px;
+  top: 195px;
+  background-color: #F0DE75;
+}
+
+.p-left-side {
+  position: absolute;
+  top: 110px;
+  left: 65px;
+  background-color: #C7C5C6;
+  height: 90px;
+  width: 110px;
+  -webkit-clip-path: polygon(77% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(77% 0, 0% 100%, 100% 100%);
+  animation: 4s pAnimationL ease-out infinite;
+}
+
+.p-right-side {
+  position: absolute;
+  top: 110px;
+  left: 149px;
+  background-color: rgb(182, 165, 126);
+  height: 90px;
+  width: 90px;
+  -webkit-clip-path: polygon(0 0, 23% 100%, 100% 100%);
+  clip-path: polygon(0 0, 23% 100%, 100% 100%);
+  animation: 4s pAnimationR ease-out infinite;
+}
+
+.shadow {
+  position: absolute;
+  top: 195px;
+  left: 65px;
+  height: 50px;
+  width: 170px;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+  animation: 4s shadowMovement ease-out infinite;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sunAnimation {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg) translateX(-130px);
+  }
+  90% {
+    opacity: 1;
+    transform: rotate(180deg) translateX(-170px);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg) translateX(-170px);
+  }
+}
+
+@keyframes pAnimationL {
+  0% {
+    background-color: #C7C5C6;
+  }
+  50% {
+    background-color: rgb(238, 216, 169);
+  }
+  100% {
+    background-color: rgb(182, 165, 126);
+  }
+}
+
+@keyframes pAnimationR {
+  0% {
+    background-color: rgb(182, 165, 126);
+  }
+  50% {
+    background-color: rgb(182, 165, 126);
+  }
+  100% {
+    background-color: rgb(238, 216, 169);
+  }
+}
+
+@keyframes shadowMovement {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+  }
+}
