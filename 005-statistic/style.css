@@ -7,30 +7,31 @@
 body {
   background: #8de4ff;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-.box {
-  width: 280px;
-  height: 220px;
+.card {
+  width: 400px;
+  height: 315px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
 }
 
 header {
-  height: 60px;
+  height: 85px;
   background-color: #f6ae2d;
   border-radius: 5px 5px 0 0;
   position: relative;
   color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding: 15px;
 }
 
 span {
