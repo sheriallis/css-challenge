@@ -51,3 +51,39 @@ header .title {
 .rev {
   text-align: end;
 }
+
+.legend {
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.views,
+.purchases {
+  position: relative;
+}
+
+.views {
+  padding-right: 30px;
+}
+
+.views::before,
+.purchases::before {
+  position: absolute;
+  top: 7px;
+  left: -22px;
+  content: "";
+  height: 4px;
+  width: 15px;
+  display: block;
+  border-radius: 100px;
+}
+
+.views::before {
+  background-color: #da627d;
+}
+
+.purchases::before {
+  background-color: #54c6eb;
+}
