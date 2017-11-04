@@ -128,3 +128,8 @@ header .title {
   text-transform: uppercase;
   color: rgb(177, 177, 177);
 }
+
+.views__line {
+  position: absolute;
+  top: 20px;
+}
