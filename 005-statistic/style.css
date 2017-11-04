@@ -133,3 +133,8 @@ header .title {
   position: absolute;
   top: 20px;
 }
+
+.purchases__line {
+  position: absolute;
+  top: 90px;
+}
