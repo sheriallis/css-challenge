@@ -129,12 +129,100 @@ header .title {
   color: rgb(177, 177, 177);
 }
 
+.point {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  z-index: 2;
+}
+
+/* STATS: VIEWS */
 .views__line {
   position: absolute;
   top: 20px;
+  z-index: 2;
+}
+.stats__views .point {
+  background-color: #da627d;
 }
 
+.stats__purchases .point {
+  background-color: #54c6eb;
+}
+
+.stats__views .point1 {
+  top: 63px;
+  left: 25px;
+}
+
+.stats__views .point2 {
+  top: 25px;
+  left: 85px;
+}
+
+.stats__views .point3 {
+  top: 66px;
+  left: 138px;
+}
+
+.stats__views .point4 {
+  top: 18px;
+  left: 210px;
+}
+
+.stats__views .point5 {
+  top: 38px;
+  right: 135px;
+}
+
+.stats__views .point6 {
+  top: 20px;
+  right: 74px;
+}
+
+.stats__views .point7 {
+  top: 58px;
+  right: 25px;
+}
+
+/* STATS: PURCHASES */
 .purchases__line {
   position: absolute;
   top: 90px;
+  z-index: 2;
+}
+
+.stats__purchases .point1 {
+  top: 108px;
+  left: 25px;
+}
+
+.stats__purchases .point2 {
+  top: 93px;
+  left: 85px;
+}
+
+.stats__purchases .point3 {
+  top: 101px;
+  left: 138px;
+}
+
+.stats__purchases .point4 {
+  top: 88px;
+  left: 210px;
+}
+
+.stats__purchases .point5 {
+  top: 113px;
+  right: 135px;
+}
+
+.stats__purchases .point6 {
+  top: 100px;
+  right: 74px;
+}
+
+.stats__purchases .point7 {
+  top: 120px;
+  right: 25px;
 }
