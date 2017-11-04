@@ -226,3 +226,64 @@ header .title {
   top: 120px;
   right: 25px;
 }
+
+/* TOOLTIPS */
+
+.tooltip {
+  visibility: hidden;
+}
+
+.point:hover .tooltip {
+  visibility: visible;
+  transform: translateX(-10px) translateY(-30px);
+  cursor: pointer;
+  animation: 0.6s fadeInTooltip ease-out;
+}
+
+.tooltip {
+  font-size: 12px;
+  transform: translateX(-10px) translateY(-30px);
+  color: #fff;
+  width: 25px;
+  height: 20px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.tooltip::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 8px;
+  width: 8px;
+}
+
+.stats__views .tooltip {
+  background-color: #da627d;
+}
+
+.stats__views .tooltip::after {
+  transform: translateX(10px) translateY(-2px) rotate(45deg);
+  background-color: #da627d;
+}
+
+.stats__purchases .tooltip {
+  background-color: #54c6eb;
+}
+
+.stats__purchases .tooltip::after {
+  transform: translateX(10px) translateY(-2px) rotate(45deg);
+  background-color: #54c6eb;
+}
+
+/* ANIMATION */
+
+@keyframes fadeInTooltip {
+  from {
+    transform: translateX(-10px) translateY(-10px);
+  }
+
+  to {
+    transform: translateX(-10px) translateY(-30px);
+  }
+}
