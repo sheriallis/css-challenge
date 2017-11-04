@@ -87,3 +87,44 @@ header .title {
 .purchases::before {
   background-color: #54c6eb;
 }
+
+.stats {
+  position: relative;
+  width: 400px;
+  height: 150px;
+}
+
+.line,
+.line::before,
+.line::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 400px;
+  background-color: rgb(224, 224, 224);
+}
+
+.line {
+  top: 40%;
+}
+
+.line::before {
+  top: -50px;
+}
+
+.line::after {
+  top: 50px;
+}
+
+.days {
+  height: 26px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.day {
+  display: inline-block;
+  text-transform: uppercase;
+  color: rgb(177, 177, 177);
+}
