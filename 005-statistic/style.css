@@ -59,17 +59,17 @@ header .title {
   margin: 10px;
 }
 
-.views,
-.purchases {
+.legend__views,
+.legend__purchases {
   position: relative;
 }
 
-.views {
+.legend__views {
   padding-right: 30px;
 }
 
-.views::before,
-.purchases::before {
+.legend__views::before,
+.legend__purchases::before {
   position: absolute;
   top: 7px;
   left: -22px;
@@ -80,11 +80,11 @@ header .title {
   border-radius: 100px;
 }
 
-.views::before {
+.legend__views::before {
   background-color: #da627d;
 }
 
-.purchases::before {
+.legend__purchases::before {
   background-color: #54c6eb;
 }
 
