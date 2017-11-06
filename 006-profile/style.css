@@ -23,12 +23,6 @@ body {
   box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.3);
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .profile {
   display: flex;
   flex-direction: column;
