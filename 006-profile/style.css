@@ -1,3 +1,4 @@
+/* MAIN */
 * {
   padding: 0;
   margin: 0;
@@ -23,6 +24,8 @@ body {
   box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* PROFILE */
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -30,6 +33,7 @@ body {
   align-items: center;
   width: 325px;
   margin-bottom: 50px;
+  margin-top: 40px;
 }
 
 .profile__name {
@@ -42,9 +46,53 @@ body {
 }
 
 .profile__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   height: 150px;
+  width: 150px;
   border-radius: 50%;
-  margin: 40px;
+}
+
+.img-container {
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border-width: 2px;
+  border-style: solid;
+  transition: all 0.8s ease-in-out;
+}
+
+.circle--inner {
+  top: 8px;
+  left: 8px;
+  width: 165px;
+  height: 165px;
+  border-color: #3a443c #3a443c #3a443c #fff;
+}
+
+.circle--outer {
+  width: 180px;
+  height: 180px;
+  border-color: #3a443c #fff #3a443c #3a443c;
+}
+
+.img-container:hover {
+  cursor: pointer;
+}
+
+.img-container:hover .circle--inner {
+  transform: rotate(360deg);
+}
+
+.img-container:hover .circle--outer {
+  transform: rotate(-360deg);
 }
 
 .btn:first-of-type {
@@ -66,6 +114,8 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
+/* STATS */
 
 .stats {
   display: flex;
