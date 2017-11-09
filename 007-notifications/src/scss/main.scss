@@ -90,6 +90,23 @@ header {
   .fa-search:hover {
     color: #fff;
   }
+
+  .search-field {
+    left: 35px;
+    position: absolute;
+    border-radius: 100px;
+    border-style: none;
+    padding: 5px 15px;
+    width: 230px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      opacity: 1;
+      left: 15px;
+      position: absolute;
+    }
+  }
 }
 
 // Menu Icon
