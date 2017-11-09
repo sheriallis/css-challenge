@@ -1,6 +1,5 @@
 // Variables
-$font-stack: "Open Sans",
-sans-serif;
+$font-stack: "Open Sans", sans-serif;
 $text-light: #93b2cd;
 $text-dark: #666;
 $blue-light: #b2daff;
@@ -58,7 +57,7 @@ body {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
   z-index: 2;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   &.reveal-menu {
     transform: translateX(-5%) translateY(-50%);
   }
@@ -181,12 +180,21 @@ header {
   font-size: 14px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   &.reveal-menu {
     left: 35px;
+  }
+  .fa {
+    margin-right: 8px;
   }
   li {
     padding: 15px;
     list-style: none;
+    transition: all 0.4s ease-out;
+    &:hover,
+    &:first-child {
+      background-color: #385269;
+      color: #fff;
+    }
   }
 }

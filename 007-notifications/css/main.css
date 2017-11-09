@@ -53,9 +53,9 @@ body {
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
   z-index: 2;
-  -webkit-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out; }
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
   .notif-panel.reveal-menu {
     -webkit-transform: translateX(-5%) translateY(-50%);
     -ms-transform: translateX(-5%) translateY(-50%);
@@ -185,11 +185,19 @@ header {
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
-  -webkit-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out; }
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; }
   .menu.reveal-menu {
     left: 35px; }
+  .menu .fa {
+    margin-right: 8px; }
   .menu li {
     padding: 15px;
-    list-style: none; }
+    list-style: none;
+    -webkit-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out; }
+    .menu li:hover, .menu li:first-child {
+      background-color: #385269;
+      color: #fff; }
