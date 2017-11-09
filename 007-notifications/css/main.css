@@ -29,7 +29,8 @@ body {
   background: #264057;
   position: relative;
   -webkit-box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.3); }
+  box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.3);
+  overflow: hidden; }
 
 .line {
   position: absolute;
@@ -51,7 +52,14 @@ body {
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+  .notif-panel.reveal-menu {
+    -webkit-transform: translateX(-5%) translateY(-50%);
+    -ms-transform: translateX(-5%) translateY(-50%);
+    transform: translateX(-5%) translateY(-50%); }
 
 header {
   display: -webkit-box;
@@ -176,7 +184,12 @@ header {
   font-size: 14px;
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-  border-radius: 3px; }
+  border-radius: 3px;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out; }
+  .menu.reveal-menu {
+    left: 35px; }
   .menu li {
     padding: 15px;
     list-style: none; }
