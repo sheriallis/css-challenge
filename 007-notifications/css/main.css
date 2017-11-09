@@ -76,6 +76,8 @@ header {
     color: #fff; }
   header .search-icon {
     font-size: 21px; }
+  header .fa-search {
+    color: #b2daff; }
 
 .menu-icon {
   position: relative;

@@ -81,6 +81,10 @@ header {
   .search-icon {
     font-size: 21px;
   }
+
+  .fa-search {
+    color: $blue-light;
+  }
 }
 
 // Menu Icon
@@ -168,3 +172,5 @@ header {
     list-style: none;
   }
 }
+
+// Interaction
