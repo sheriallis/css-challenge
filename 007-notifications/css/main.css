@@ -77,7 +77,12 @@ header {
   header .search-icon {
     font-size: 21px; }
   header .fa-search {
-    color: #b2daff; }
+    color: #b2daff;
+    -webkit-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out; }
+  header .fa-search:hover {
+    color: #fff; }
 
 .menu-icon {
   position: relative;
@@ -87,7 +92,10 @@ header {
   .menu-icon .circle,
   .menu-icon .line-b {
     background-color: #b2daff;
-    position: absolute; }
+    position: absolute;
+    -webkit-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out; }
   .menu-icon .line-t {
     top: 6px;
     height: 4px;
@@ -104,6 +112,10 @@ header {
     height: 4px;
     width: 30px;
     border-radius: 100px; }
+  .menu-icon:hover .line-t,
+  .menu-icon:hover .circle,
+  .menu-icon:hover .line-b {
+    background-color: #fff; }
 
 .notification {
   padding-top: 15px;

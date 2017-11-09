@@ -84,6 +84,11 @@ header {
 
   .fa-search {
     color: $blue-light;
+    transition: color 0.2s ease-out;
+  }
+
+  .fa-search:hover {
+    color: #fff;
   }
 }
 
@@ -99,6 +104,7 @@ header {
   .line-b {
     background-color: $blue-light;
     position: absolute;
+    transition: background-color 0.2s ease-out;
   }
 
   .line-t {
@@ -121,6 +127,12 @@ header {
     height: 4px;
     width: 30px;
     border-radius: 100px;
+  }
+
+  &:hover .line-t,
+  &:hover .circle,
+  &:hover .line-b {
+    background-color: #fff;
   }
 }
 
