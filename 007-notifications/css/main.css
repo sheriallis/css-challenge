@@ -134,7 +134,9 @@ header {
     background: #fff;
     left: 3;
     border: 3px solid #b2daff;
-    border-radius: 50%; }
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 0 4px #fff;
+    box-shadow: 0 0 0 4px #fff; }
 
 .menu {
   display: -webkit-box;
